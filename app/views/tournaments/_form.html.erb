@@ -1,0 +1,25 @@
+
+<%= form_for [@wrestler, @tournament] do |f| %>
+  <%= f.label :name, 'Tournament Name' %>
+  <%= f.text_field :name, required: true %>
+
+  <br />
+  <%= f.label :win %>
+  <%= f.number_field :win, required: true %>
+
+  <br />
+  <%= f.label :loss %>
+  <%= f.number_field :loss, required: true %>
+
+
+  <br />
+  <%= f.label :grade %>
+  <%= f.text_field :grade %>
+
+  <br />
+  <%= f.label :place %>
+  <%= f.select :place, %w(1st 2nd 3rd 4th 5th 6th DNP), required: true %>
+
+  <br />
+  <%= f.submit %>
+<% end %>

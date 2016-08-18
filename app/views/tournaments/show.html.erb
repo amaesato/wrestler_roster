@@ -1,0 +1,11 @@
+<h2><%= @wrestler.name %> STATS: <%= @tournament.name %></h2>
+
+<ul>
+  <li>Wins: <%= @tournament.win %> </li>
+  <li>Losses: <%= @tournament.loss %> </li>
+  <li>Grade: <%= @tournament.grade %> </li>
+  <li>Place: <%= @tournament.place %> </li>
+</ul>
+<%= link_to '<< Back', wrestler_tournaments_path(@wrestler) %> |
+<%= link_to 'Delete Profile', wrestler_tournament_path(@wrestler, @tournament), method: :delete, data: {confirm: 'Are you sure you want to delete this stat'} %>
+<hr />

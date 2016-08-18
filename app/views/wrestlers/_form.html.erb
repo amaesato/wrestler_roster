@@ -1,0 +1,28 @@
+<% if @wrestler.errors.any? %>
+  <ul>
+    <% @wrestler.errors.full_messages.each do |error| %>
+      <li> <%= error %> </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= form_for @wrestler do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name, required: true %>
+
+  <br />
+  <%= f.label :age %>
+  <%= f.number_field :age, required: true %>
+
+  <br />
+  <%= f.label :gender %>
+  <%= f.text_field :gender %>
+
+
+  <br />
+  <%= f.label :weight %>
+  <%= f.text_field :weight, required: true %>
+
+  <br />
+  <%= f.submit %>
+<% end %>
